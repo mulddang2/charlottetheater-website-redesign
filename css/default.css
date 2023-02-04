@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Montserrat:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=Philosopher:wght@700&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+::before, ::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', 'Noto Sans KR', 'Barlow Condensed', 'Philosopher', sans-serif;
+    font-size: 16px;
+    color: #444;
+}
+a {
+    color: #444;
+}
+button{
+    background: inherit;
+    border:none; 
+    box-shadow:none; 
+    border-radius:0; 
+    padding:0; 
+    overflow:visible; 
+    cursor:pointer;
+    vertical-align: middle;
+} 
+::selection {
+    background-color: #A44548;
+    color: #fff;
+}
+::placeholder {
+    font-family: 'Montserrat', 'Noto Sans KR', 'Barlow Condensed', 'Philosopher', sans-serif;
+}
+
+/* Font Style */
+em {
+    font-style: normal;
+}
+html *[lang="en"] {
+    font-family: 'Barlow Condensed', Montserrat, Noto Sans KR , sans-serif;
+    font-weight: 500;
+}
