@@ -57,29 +57,29 @@ header {
 }
 
 /* Notice - Swiper slide */
-.swiper {
+.notice {
   width: 60%;
   margin-top: 20px;
 }
-.swiper h3 {
+.notice h3 {
   font-size: max(5.75vw, 1rem);
   line-height: 1.3;
 }
-.swiper p {
+.notice p {
   line-height: 1.25;
   margin: 50px 0 60px 0;
   font-size: max(4.9vw, 1rem);
 }
-.swiper .date {
+.notice .date {
   font-family: "Barlow Condensed", sans-serif;
   color: #999;
 }
-.swiper .swiper-wrapper {
+.notice .swiper-wrapper {
   width: 30%;
   height: auto;
   padding-bottom: 50px;
 }
-.swiper .swiper-slide {
+.notice .swiper-slide {
   display: flex;
   width: 30%;
   height: auto;
@@ -90,7 +90,19 @@ header {
   justify-content: center;
   align-items: center;
 }
-.swiper .swiper-pagination {
+.notice .slide1,
+.notice .slide2,
+.notice .slide3,
+.notice .slide4 {
+  background-color: #F7F7F7;
+}
+
+.container {
+  padding-right: max(3.75vw, 12px);
+  padding-left: max(3.75vw, 12px);
+}
+
+.cards .swiper-pagination {
   width: 20px;
   height: 20px;
   border-bottom: 1px solid #000;
@@ -98,21 +110,11 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
-.swiper .slide1,
-.swiper .slide2,
-.swiper .slide3,
-.swiper .slide4 {
-  background-color: #F7F7F7;
-}
 
 #newsletter {
   height: auto;
   background-color: #FDF3D7;
   padding: 50px 0;
-}
-#newsletter .container {
-  padding-right: max(3.75vw, 12px);
-  padding-left: max(3.75vw, 12px);
 }
 #newsletter h3 {
   text-align: center;
@@ -136,7 +138,6 @@ header {
   max-width: max(93.75vw, 300px);
 }
 #newsletter .newsletter-form button {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: max(10vw, 32px);
@@ -149,7 +150,6 @@ header {
 }
 #newsletter .newsletter-form button span {
   width: 1px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
@@ -212,9 +212,6 @@ header {
 .form-group input::-moz-placeholder {
   color: #aaaaaa;
 }
-.form-group input:-ms-input-placeholder {
-  color: #aaaaaa;
-}
 .form-group input::placeholder {
   color: #aaaaaa;
 }
@@ -225,4 +222,73 @@ header {
   left: 10px;
   font-size: 20px;
   transition: all 0.2s;
+}
+
+#cast {
+  height: auto;
+  padding: 50px 0;
+}
+#cast img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cast {
+  margin-top: 20px;
+}
+
+.wrap-autoplay-control {
+  position: absolute;
+  z-index: 10;
+  bottom: 7px;
+  left: calc(50% + 60px);
+  transform: translateX(-50%);
+}
+
+.wrap-autoplay-control button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wrap-autoplay-control button:before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.wrap-autoplay-control button[aria-pressed=false]:before {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  box-sizing: border-box;
+}
+
+.wrap-autoplay-control button[aria-pressed=true]:before {
+  top: 4px;
+  left: 4px;
+  border-top: 5px solid transparent;
+  border-left: 12px solid #fff;
+  border-bottom: 5px solid transparent;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background-color: #FDF3D7;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
 }
