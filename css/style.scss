@@ -271,27 +271,35 @@ header {
     img {
         width: 100%;
         height: auto;
-        object-fit:cover;
+        object-fit: cover;
     }
 }
 .cast {
     margin-top: 20px;
+    
+    .cast-name span {
+        text-decoration: underline;
+        display: block;
+        font-size: max(.4375rem + .4861111111vw,.875rem);
+        line-height: 1.14;
+    }
 }
 .wrap-autoplay-control {
     position: absolute;
     z-index: 10;
-    bottom: 7px;
-    left: calc(50% + 60px);
+    left: calc(50% + 50px);
     transform: translateX(-50%);
+    bottom: 54px;
 }
 
 .wrap-autoplay-control button {
+    border: 1px solid #000;
     display: block;
     width: 20px;
     height: 20px;
-    border: 0;
     background: transparent;
     cursor: pointer;
+    padding: 10px;
 }
 
 .wrap-autoplay-control button:before {
@@ -301,8 +309,8 @@ header {
 }
 
 .wrap-autoplay-control button[aria-pressed="false"]:before {
-    top: 4px;
-    left: 4px;
+    top: 7px;
+    left: 7px;
     width: 10px;
     height: 10px;
     border-left: 3px solid #fff;
@@ -311,8 +319,8 @@ header {
 }
 
 .wrap-autoplay-control button[aria-pressed="true"]:before {
-    top: 4px;
-    left: 4px;
+    top: 7px;
+    left: 7px;
     border-top: 5px solid transparent;
     border-left: 12px solid #fff;
     border-bottom: 5px solid transparent;
@@ -326,4 +334,57 @@ header {
 }
 .swiper-pagination-bullet-active {
     opacity: 1;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 54px
+}
+footer {
+    background-color:  #430103;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    a {
+    color: #fff;
+    }
+    .footer-logo {
+        padding-top: 25px;
+    }
+    .footer-title {
+        margin: 20px auto;
+    }
+    .info-text {
+        color: #D3C8C8;
+    }
+    .cs-center {
+        margin-bottom: 20px;
+    }
+}
+.info-container {
+    padding: 0 4%;
+    width: 100%;
+    border-bottom: 1px solid #ffffff72;
+    .cs-btn {
+        display: flex;
+        justify-content: space-between;
+    }
+    button {
+        color: #fff;
+        background-color: #A06363;
+        width: 48%;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+}
+.info {
+    width: 100%;
+    margin-bottom: 20px;
+    span {
+        line-height: 165%;
+    }
+}
+.copy {
+    padding: 01.4375rem 4%;
+    font-size: 0.9375rem;
+
 }

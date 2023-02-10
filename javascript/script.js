@@ -10,6 +10,7 @@ swiperNotice = new Swiper('.swiper.notice', {
     },
 });
 swiperCast = new Swiper('.swiper.cast', {
+    slidesPerView: 1,
     autoplay: {
         delay: 1500,
     },
