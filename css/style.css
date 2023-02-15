@@ -254,7 +254,6 @@ header {
 }
 
 .wrap-autoplay-control button {
-  border: 1px solid #000;
   display: block;
   width: 20px;
   height: 20px;
@@ -317,7 +316,9 @@ footer .footer-logo {
   padding-top: 25px;
 }
 footer .footer-title {
-  margin: 20px auto;
+  margin: 5px auto;
+  padding: 5px 0;
+  font-size: 0.813rem;
 }
 footer .info-text {
   color: #D3C8C8;
@@ -334,6 +335,7 @@ footer .cs-center {
 .info-container .cs-btn {
   display: flex;
   justify-content: space-between;
+  letter-spacing: 1px;
 }
 .info-container button {
   color: #fff;
@@ -341,6 +343,8 @@ footer .cs-center {
   width: 48%;
   border-radius: 5px;
   padding: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
 .info {
@@ -349,9 +353,57 @@ footer .cs-center {
 }
 .info span {
   line-height: 165%;
+  font-size: 0.656rem;
+}
+.info .info-text {
+  font-size: 0.656rem;
+}
+
+.sns-list {
+  width: 58%;
+  margin: 0 2% 0 0;
+  padding: 1rem 0;
+  float: left;
+}
+.sns-list li {
+  display: inline-block;
+  padding-right: 6px;
+}
+.sns-list a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  background: #A06363 center no-repeat;
+  margin: 0 auto;
+}
+.sns-list .icon-youtube a {
+  background-image: url("../images/icon-youtube.svg");
+}
+.sns-list .icon-band a {
+  background-image: url("../images/icon-band.svg");
+}
+.sns-list .icon-twitter a {
+  background-image: url("../images/icon-twitter.svg");
 }
 
 .copy {
   padding: 1.4375rem 4%;
-  font-size: 0.9375rem;
+  font-size: 0.625rem;
+}
+
+.footer-util {
+  clear: both;
+  line-height: 170%;
+  margin-bottom: 1rem;
+  font-size: 0.625rem;
+}
+.footer-util li {
+  display: inline-block;
+}
+
+.footer-util li:not(:last-child)::after {
+  content: "|";
+  margin: 0.625rem;
 }

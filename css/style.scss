@@ -293,7 +293,7 @@ header {
 }
 
 .wrap-autoplay-control button {
-    border: 1px solid #000;
+    //border: 1px solid #000;
     display: block;
     width: 20px;
     height: 20px;
@@ -350,7 +350,10 @@ footer {
         padding-top: 25px;
     }
     .footer-title {
-        margin: 20px auto;
+        margin: 5px auto;
+        padding: 5px 0;
+        font-size: .813rem;
+        //font-family: 'Noto Sans KR', sans-serif;
     }
     .info-text {
         color: #D3C8C8;
@@ -366,6 +369,7 @@ footer {
     .cs-btn {
         display: flex;
         justify-content: space-between;
+        letter-spacing: 1px;
     }
     button {
         color: #fff;
@@ -373,18 +377,65 @@ footer {
         width: 48%;
         border-radius: 5px;
         padding: 15px;
+        font-size: .75rem;
+        font-weight: bold;
     }
-
 }
 .info {
     width: 100%;
     margin-bottom: 20px;
     span {
         line-height: 165%;
+        font-size: .656rem;
+
+    }
+    .info-text {
+        font-size: .656rem;
+    }
+}
+.sns-list {
+    width: 58%;
+    margin: 0 2% 0 0;
+    padding: 1rem 0;
+    float: left;
+    li {
+        display: inline-block;
+        padding-right: 6px;
+    }
+    a {
+        display: block;
+        width: 48px;
+        height: 48px;
+        text-indent: -9999px;
+        border-radius: 50%;
+        background: #A06363 center no-repeat;
+        margin: 0 auto;
+    }
+    .icon-youtube a {
+        background-image: url('../images/icon-youtube.svg');
+    }
+    .icon-band a {
+        background-image: url('../images/icon-band.svg');
+    }
+    .icon-twitter a {
+        background-image: url('../images/icon-twitter.svg');
     }
 }
 .copy {
     padding: 01.4375rem 4%;
-    font-size: 0.9375rem;
+    font-size: 0.625rem;
 
+}
+.footer-util {
+    clear: both;
+    line-height: 170%;
+    margin-bottom: 1rem;
+    font-size: 0.625rem;
+    li {
+        display: inline-block;
+    }
+}
+.footer-util li:not(:last-child)::after {
+    content: '|';
+    margin: 0.625rem;
 }
