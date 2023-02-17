@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 header {
     width: 100%;
 }
@@ -5,10 +7,13 @@ header {
 .logo-wrap {
     width: 100%;
     height: auto;
+    position: fixed;
+    z-index: 100;
     padding: 3vw 4vw;
-    // border: 1px solid #000;
+    //border: 1px solid #000;
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
 
     .logo img {
         height: 35px;
@@ -37,18 +42,43 @@ header {
     }
 }
 
+.btn-top {
+    background-color: #430103;
+    border: 1px solid #fff;
+    bottom: 3.125vw;
+    /* hide with opacity */
+    opacity: 0;
+
+    /* also add a translate effect */
+    transform: translateY(100px);
+
+    /* and a transition */
+    transition: all .5s ease
+}
+.btn-top.show-btn {
+    opacity: 1;
+    transform: translateY(0)
+}
+.btn-top,
 .quick-buy {
     position: fixed;
     width: Max(15vw, 48px);
     height: Max(15vw, 48px);
     padding: Max(3.4vw, 12px);
-    border-radius: Max(15vw, 48px);
-    bottom: 10px;
     right: 4vw;
+    border-radius: Max(15vw, 48px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 10;
-    background-color: #430103;
+}
+
+.quick-buy {
+    bottom: 3.125vw;
+    //bottom: 19.1944444444vw;
+    background-color: #FDF3D7;
     border: 1px solid #fff;
-    transition: bottom .2s ease-in-out;
+    transition: bottom .4s ease-in-out;
 
     &:hover img {
         filter: invert(45%) sepia(58%) saturate(5610%) hue-rotate(337deg) brightness(100%) contrast(102%);
@@ -60,6 +90,8 @@ header {
         height: Max(7.5vw, 24px);
     }
 }
+
+
 
 /* Notice - Swiper slide */
 .notice {
@@ -104,7 +136,7 @@ header {
 
     .swiper-slide {
         display: flex;
-        width: 30%;
+        width: 50%;
         height: auto;
         border-radius: 5px;
         text-align: center;
@@ -268,22 +300,25 @@ header {
 #cast {
     height: auto;
     padding: 50px 0;
+
     img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
 }
+
 .cast {
     margin-top: 20px;
-    
+
     .cast-name span {
         text-decoration: underline;
         display: block;
-        font-size: max(.4375rem + .4861111111vw,.875rem);
+        font-size: max(.4375rem + .4861111111vw, .875rem);
         line-height: 1.14;
     }
 }
+
 .wrap-autoplay-control {
     position: absolute;
     z-index: 10;
@@ -325,52 +360,66 @@ header {
     border-left: 12px solid #fff;
     border-bottom: 5px solid transparent;
 }
-.swiper-button-next, .swiper-button-prev {
+
+.swiper-button-next,
+.swiper-button-prev {
     color: #fff;
 }
+
 .swiper-pagination-bullet {
     background-color: #FDF3D7;
     opacity: .4;
 }
+
 .swiper-pagination-bullet-active {
     opacity: 1;
 }
+
 .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 54px
 }
+
 footer {
-    background-color:  #430103;
+    background-color: #430103;
     width: 100%;
     height: auto;
     color: #fff;
+
     a {
-    color: #fff;
+        color: #fff;
     }
+
     .footer-logo {
         padding-top: 25px;
     }
+
     .footer-title {
         margin: 5px auto;
         padding: 5px 0;
         font-size: .813rem;
         //font-family: 'Noto Sans KR', sans-serif;
     }
+
     .info-text {
         color: #D3C8C8;
     }
+
     .cs-center {
         margin-bottom: 20px;
     }
 }
+
 .info-container {
     padding: 0 4%;
     width: 100%;
     border-bottom: 1px solid #ffffff72;
+
     .cs-btn {
         display: flex;
         justify-content: space-between;
         letter-spacing: 1px;
     }
+
     button {
         color: #fff;
         background-color: #A06363;
@@ -381,27 +430,33 @@ footer {
         font-weight: bold;
     }
 }
+
 .info {
     width: 100%;
     margin-bottom: 20px;
+
     span {
         line-height: 165%;
         font-size: .656rem;
 
     }
+
     .info-text {
         font-size: .656rem;
     }
 }
+
 .sns-list {
     width: 58%;
     margin: 0 2% 0 0;
     padding: 1rem 0;
     float: left;
+
     li {
         display: inline-block;
         padding-right: 6px;
     }
+
     a {
         display: block;
         width: 48px;
@@ -411,30 +466,37 @@ footer {
         background: #A06363 center no-repeat;
         margin: 0 auto;
     }
+
     .icon-youtube a {
         background-image: url('../images/icon-youtube.svg');
     }
+
     .icon-band a {
         background-image: url('../images/icon-band.svg');
     }
+
     .icon-twitter a {
         background-image: url('../images/icon-twitter.svg');
     }
 }
+
 .copy {
     padding: 01.4375rem 4%;
     font-size: 0.625rem;
 
 }
+
 .footer-util {
     clear: both;
     line-height: 170%;
     margin-bottom: 1rem;
     font-size: 0.625rem;
+
     li {
         display: inline-block;
     }
 }
+
 .footer-util li:not(:last-child)::after {
     content: '|';
     margin: 0.625rem;
