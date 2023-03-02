@@ -9,8 +9,8 @@
     <!-- Swiper's CSS-->
     <link href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" rel="stylesheet">
     <!-- Custom Styles -->
-    <link rel="stylesheet" type="text/css" href="./css/default.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/default.css">
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
 
 </head>
@@ -18,19 +18,97 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="logo-wrap">
-                <button>
-                    <img src="./images/magnifer.svg" alt="검색">
-                </button>
-                <h1 class="logo">
-                    <a href="/">
-                        <img src="./images/logo.png" alt="샤롯데씨어터 로고">
-                    </a>
-                </h1>
-                <button>
-                    <img src="./images/buger.svg" alt="">
-                </button>
+            <div class="pc-header-top">
+                <ul class="lnbbox">
+                    <li>
+                        <a href="#">Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Join</a>
+                    </li>
+                    <li>
+                        <a href="/">KOR</a>
+                    </li>
+                </ul>
+                <ul class="pc-header-sns-list">
+                    <li>
+                        <a href="">
+                            <img src="./images/pc_btn_twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./images/pc_btn_band.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./images/pc_btn_youtube_.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
             </div>
+            <nav class="navbar">
+                    <h1 class="logo">
+                        <a href="/">
+                            <img src="./images/logo.png" alt="샤롯데씨어터 로고">
+                        </a>
+                    </h1>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="/">샤롯데씨어터</a>
+                            <ul class="drop">
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">시설안내</a></li>
+                                <li><a href="#">대관안내</a></li>
+                                <li><a href="#">채용공고</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/">공연예매</a>
+                            <ul class="drop">
+                                <li><a href="#">공연예매/일정</a></li>
+                                <li><a href="#">패키지예매</a></li>
+                                <li><a href="#">예매확인/취소</a></li>
+                                <li><a href="#">객석안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/">부가서비스</a>
+                            <ul class="drop">
+                                <li><a href="#">오페라글라스</a></li>
+                                <li><a href="#">발렛서비스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/">이벤트</a>
+                            <ul class="drop">
+                                <li><a href="#">진행이벤트</a></li>
+                                <li><a href="#">당첨자 발표</a></li>
+                                <li><a href="#">지난 이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/">이용안내</a>
+                            <ul class="drop">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">고객문의</a></li>
+                                <li><a href="#">제휴할인</a></li>
+                                <li><a href="#">관람안내</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="header-r-btn">
+                        <button class="top-search">
+                            <img src="./images/magnifer.svg" alt="검색">
+                        </button>
+                        <button class="burger">
+                            <img src="./images/buger.svg" alt="">
+                        </button>
+                    </div>
+            </nav>
         </header>
         <main>
             <section>
@@ -43,7 +121,7 @@
                     <em class="en">NOTICE</em>
                     <h2>공지사항</h2>
                 </div>
-                <div class="swiper notice">
+                <div class="swiper notice-cards">
                     <div class="swiper-wrapper cards-all">
                         <!-- Slides -->
                         <div class="swiper-slide slide1 cards">
@@ -176,16 +254,16 @@
             </div>
         </div>
     </article>
-        <div class="quick-buy">
-            <a href="#">
-                <img src="./images/calendar-red.svg" alt="예매하기">
-            </a>
-        </div>
-        <div class="btn-top">
-            <a href="#">
-                <img src="./images/btn-top.svg" alt="맨위로 이동">
-            </a>
-        </div>
+    <div class="quick-buy">
+        <a href="#">
+            <img src="./images/calendar-red.svg" alt="예매하기">
+        </a>
+    </div>
+    <div class="btn-top">
+        <a href="#">
+            <img src="./images/btn-top.svg" alt="맨위로 이동">
+        </a>
+    </div>
     </main>
     <footer>
         <div class="info-container">
@@ -240,6 +318,8 @@
         <div class="copy">Copyright © 2023 LOTTE CULTUREWORKS All right reserved.</div>
     </footer>
     </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
     <script src="./javascript/script.js"></script>

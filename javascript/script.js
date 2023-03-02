@@ -1,15 +1,34 @@
 let thisSlide,
     slidesLength;
-
-swiperNotice = new Swiper('.swiper.notice', {
-    effect: 'cards',
-    a11y: {
+var ww = $(window).width();
+function initSwiper() {
+    let accessibilityParameters = {
         prevSlideMessage: '이전 슬라이드',
         nextSlideMessage: '다음 슬라이드',
         slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-    },
+    }
 
-})
+    if (ww < 768) {
+        swiperNoticeCards = new Swiper('.swiper.notice-cards', {
+            effect: 'cards',
+            a11y: accessibilityParameters,
+        })
+    } else if (ww >= 768) {
+        swiperNoticeCards = new Swiper('.swiper.notice-cards', {
+            effect: 'slide',
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            spaceBetween: 50,
+            a11y: accessibilityParameters,
+        })
+    }
+}
+initSwiper();
+
+$(window).on('resize', function () {
+    ww = $(window).width();
+    initSwiper();
+});
 
 swiperCast = new Swiper('.swiper.cast', {
     slidesPerView: 1,
@@ -17,11 +36,11 @@ swiperCast = new Swiper('.swiper.cast', {
     breakpoints: {
 
         768: {
-            slidesPerView: 2,  
+            slidesPerView: 2,
             spaceBetween: 40,
         },
         1024: {
-            slidesPerView: 4,  
+            slidesPerView: 4,
             spaceBetween: 20,
         },
     },
@@ -66,22 +85,48 @@ Top.addEventListener('click', function (e) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 var rootElement = document.documentElement
-var showTopBtn = document.querySelector(".btn-top")
 var quickBuy = document.querySelector('.quick-buy')
+var showTopBtn = document.querySelector(".btn-top")
+
 function handleScroll() {
     // Do something on scroll
-    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-    if ((rootElement.scrollTop / scrollTotal) > 0.20) {
-        // Show button
+    var btnHeight = quickBuy.clientHeight
+    var btnGap = btnHeight / 3
+    var scrollRemainder = rootElement.scrollHeight - rootElement.clientHeight
+
+    // Show button
+    if ((rootElement.scrollTop / scrollRemainder) > 0.20) {
+        quickBuy.style.bottom = String(btnHeight + btnGap + (rootElement.clientWidth / 100 * 4)) + "px";
         showTopBtn.classList.add("show-btn")
-        quickBuy.style.bottom = "19.1944444444vw";
-
-    } else {
-        // Hide button
-        showTopBtn.classList.remove("show-btn")
-        quickBuy.style.bottom = "3.125vw";
-
     }
-}
+    // Hide button 
+    else {
+        quickBuy.style.bottom = String(rootElement.clientWidth / 100 * 4) + "px";
+        showTopBtn.classList.remove("show-btn")
+    }
 
+    showTopBtn.style.bottom = String(rootElement.clientWidth / 100 * 4) + "px";
+}
 document.addEventListener("scroll", handleScroll)
+window.addEventListener("resize", handleScroll);
+
+//Navigation Menu 
+//공연예매에 마우스오버하면 바로자식 drop이 block 된다.
+
+$(document).ready(function () {
+    $('.main-nav>li').mouseover(function () {
+        $(this).find('.drop').stop().slideDown(300);
+    }).mouseout(function () {
+        $(this).find('.drop').stop().slideUp(300);
+    });
+
+})
+
+var mainNavList = document.querySelectorAll(".main-nav>li")
+function addMainDropEvent() {
+    mainNavList.forEach(element => {
+        element.addEventListener("mouseenter", (event) => {
+            event.target.find
+        })
+    })
+}

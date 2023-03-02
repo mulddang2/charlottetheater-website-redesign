@@ -4,21 +4,54 @@ header {
     width: 100%;
 }
 
-.logo-wrap {
+.pc-header-top {
+    display: none;
+}
+
+.navbar {
     width: 100%;
-    height: auto;
+    //height: auto;
+    height: max(4.84vw, 95px);
     position: fixed;
     z-index: 100;
     padding: 3vw 4vw;
-    //border: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .logo img {
-        height: 35px;
-        vertical-align: middle;
+    h1 {
+        flex-grow: .1;
+
+        img {
+            height: 35px;
+            vertical-align: middle;
+        }
     }
+
+    .drop {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: #430103;
+        margin-top: .4375rem;
+
+        li {
+            width: 8em;
+        }
+
+        a {
+            color: #fff;
+            font-size: 14px;
+        }
+
+    }
+
+
+}
+
+.drop.show-nav {
+    display: block;
 }
 
 .main-visual {
@@ -45,7 +78,7 @@ header {
 .btn-top {
     background-color: #430103;
     border: 1px solid #fff;
-    bottom: 3.125vw;
+    bottom: 1rem;
     /* hide with opacity */
     opacity: 0;
 
@@ -55,26 +88,39 @@ header {
     /* and a transition */
     transition: all .5s ease
 }
+
 .btn-top.show-btn {
     opacity: 1;
     transform: translateY(0)
 }
+
 .btn-top,
 .quick-buy {
     position: fixed;
-    width: Max(15vw, 48px);
-    height: Max(15vw, 48px);
-    padding: Max(3.4vw, 12px);
+    width: 3rem;
+    height: 3rem;
+    padding: max(.8333333333vw, 12px);
     right: 4vw;
-    border-radius: Max(15vw, 48px);
+    bottom: 0;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
 }
 
+.btn-top img,
+.quick-buy img {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+
+    // width: Max(2.12vw, 24px);
+    // height: Max(2.12vw, 24px);
+}
+
 .quick-buy {
-    bottom: 3.125vw;
     //bottom: 19.1944444444vw;
     background-color: #FDF3D7;
     border: 1px solid #fff;
@@ -84,17 +130,13 @@ header {
         filter: invert(45%) sepia(58%) saturate(5610%) hue-rotate(337deg) brightness(100%) contrast(102%);
     }
 
-    img {
-        display: block;
-        width: Max(7.5vw, 24px);
-        height: Max(7.5vw, 24px);
-    }
+
 }
 
 
 
 /* Notice - Swiper slide */
-.notice {
+.notice-cards {
     width: 60%;
     margin-top: 20px;
 
@@ -110,18 +152,6 @@ header {
     }
 
 
-    // .swiper-wrapper:last-child {
-    //     width: 100px;
-    //     font-size: 1rem;
-    //     padding: 5px;
-    //     border-radius: 5px;
-    //     border: 1px solid #000;
-    //     text-align: center;
-    //     &:hover {
-    //         color: #FF4141;
-    //         border-color: #FF4141;
-    //     }
-    // }
 
     .date {
         font-family: 'Barlow Condensed', sans-serif;

@@ -2,19 +2,45 @@ header {
   width: 100%;
 }
 
-.logo-wrap {
+.pc-header-top {
+  display: none;
+}
+
+.navbar {
   width: 100%;
-  height: auto;
+  height: max(4.84vw, 95px);
   position: fixed;
   z-index: 100;
   padding: 3vw 4vw;
-  display: flex;
-  justify-content: space-between;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo-wrap .logo img {
+.navbar h1 {
+  flex-grow: 0.1;
+}
+.navbar h1 img {
   height: 35px;
   vertical-align: middle;
+}
+.navbar .drop {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #430103;
+  margin-top: 0.4375rem;
+}
+.navbar .drop li {
+  width: 8em;
+}
+.navbar .drop a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.drop.show-nav {
+  display: block;
 }
 
 .main-visual {
@@ -40,7 +66,7 @@ header {
 .btn-top {
   background-color: #430103;
   border: 1px solid #fff;
-  bottom: 3.125vw;
+  bottom: 1rem;
   /* hide with opacity */
   opacity: 0;
   /* also add a translate effect */
@@ -57,19 +83,26 @@ header {
 .btn-top,
 .quick-buy {
   position: fixed;
-  width: max(15vw, 48px);
-  height: max(15vw, 48px);
-  padding: max(3.4vw, 12px);
+  width: 3rem;
+  height: 3rem;
+  padding: max(0.8333333333vw, 12px);
   right: 4vw;
-  border-radius: max(15vw, 48px);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
 }
 
+.btn-top img,
+.quick-buy img {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .quick-buy {
-  bottom: 3.125vw;
+  bottom: 0;
   background-color: #FDF3D7;
   border: 1px solid #fff;
   transition: bottom 0.4s ease-in-out;
@@ -77,36 +110,31 @@ header {
 .quick-buy:hover img {
   filter: invert(45%) sepia(58%) saturate(5610%) hue-rotate(337deg) brightness(100%) contrast(102%);
 }
-.quick-buy img {
-  display: block;
-  width: max(7.5vw, 24px);
-  height: max(7.5vw, 24px);
-}
 
 /* Notice - Swiper slide */
-.notice {
+.notice-cards {
   width: 60%;
   margin-top: 20px;
 }
-.notice h3 {
+.notice-cards h3 {
   font-size: max(5.75vw, 1rem);
   line-height: 1.3;
 }
-.notice p {
+.notice-cards p {
   line-height: 1.25;
   margin: 50px 0 60px 0;
   font-size: max(4.9vw, 1rem);
 }
-.notice .date {
+.notice-cards .date {
   font-family: "Barlow Condensed", sans-serif;
   color: #999;
 }
-.notice .swiper-wrapper {
+.notice-cards .swiper-wrapper {
   width: 30%;
   height: auto;
   padding-bottom: 50px;
 }
-.notice .swiper-slide {
+.notice-cards .swiper-slide {
   display: flex;
   width: 50%;
   height: auto;
@@ -117,10 +145,10 @@ header {
   justify-content: center;
   align-items: center;
 }
-.notice .slide1,
-.notice .slide2,
-.notice .slide3,
-.notice .slide4 {
+.notice-cards .slide1,
+.notice-cards .slide2,
+.notice-cards .slide3,
+.notice-cards .slide4 {
   background-color: #F7F7F7;
 }
 
