@@ -1,5 +1,10 @@
 header {
   width: 100%;
+  height: max(4.84vw, 95px);
+}
+
+main {
+  width: 100%;
 }
 
 .pc-header-top {
@@ -44,13 +49,15 @@ header {
 }
 
 .main-visual {
-  width: 100%;
+  width: 100vw;
   padding-bottom: 50px;
 }
 .main-visual img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .title {
@@ -87,6 +94,7 @@ header {
   height: 3rem;
   padding: max(0.8333333333vw, 12px);
   right: 4vw;
+  bottom: 0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -102,7 +110,6 @@ header {
 }
 
 .quick-buy {
-  bottom: 0;
   background-color: #FDF3D7;
   border: 1px solid #fff;
   transition: bottom 0.4s ease-in-out;

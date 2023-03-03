@@ -1,7 +1,13 @@
-let thisSlide,
-    slidesLength;
-var ww = $(window).width();
+// Main-Visual Swiper Event
+new Swiper('.swiper.main-visual', {
+    speed: 400,
+    spaceBetween: 100,
+});
+
+// Notice Swiper Event
 function initSwiper() {
+    let ww = window.innerWidth
+
     let accessibilityParameters = {
         prevSlideMessage: '이전 슬라이드',
         nextSlideMessage: '다음 슬라이드',
@@ -24,13 +30,12 @@ function initSwiper() {
     }
 }
 initSwiper();
-
-$(window).on('resize', function () {
-    ww = $(window).width();
+window.addEventListener("resize", () => {
     initSwiper();
-});
+})
 
-swiperCast = new Swiper('.swiper.cast', {
+// Cast Swiper Event
+new Swiper('.swiper.cast', {
     slidesPerView: 1,
     centeredSlides: true,
     breakpoints: {
@@ -64,7 +69,7 @@ swiperCast = new Swiper('.swiper.cast', {
     },
     on: {
         init: function () {
-            thisSlide = this;
+            let thisSlide = this;
             autoPlayBtn = document.querySelector('.wrap-autoplay-control > button');
             autoPlayBtn.addEventListener('click', (e) => {
                 autoPlayState = autoPlayBtn.getAttribute('aria-pressed');
@@ -79,15 +84,18 @@ swiperCast = new Swiper('.swiper.cast', {
         },
     },
 });
-let Top = document.querySelector('.btn-top');
-Top.addEventListener('click', function (e) {
+
+// TopButton Event
+let topBtn = document.querySelector('.btn-top');
+topBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
+
+// Scroll Event
 var rootElement = document.documentElement
 var quickBuy = document.querySelector('.quick-buy')
 var showTopBtn = document.querySelector(".btn-top")
-
 function handleScroll() {
     // Do something on scroll
     var btnHeight = quickBuy.clientHeight
@@ -110,23 +118,14 @@ function handleScroll() {
 document.addEventListener("scroll", handleScroll)
 window.addEventListener("resize", handleScroll);
 
-//Navigation Menu 
-//공연예매에 마우스오버하면 바로자식 drop이 block 된다.
-
-$(document).ready(function () {
-    $('.main-nav>li').mouseover(function () {
-        $(this).find('.drop').stop().slideDown(300);
-    }).mouseout(function () {
-        $(this).find('.drop').stop().slideUp(300);
-    });
-
-})
-
+// Navigation Menu Event
 var mainNavList = document.querySelectorAll(".main-nav>li")
-function addMainDropEvent() {
-    mainNavList.forEach(element => {
-        element.addEventListener("mouseenter", (event) => {
-            event.target.find
-        })
+mainNavList.forEach(li => {
+    li.addEventListener('mouseenter', (e) => {
+        e.currentTarget.querySelector("ul.drop").classList.add("show-nav")
     })
-}
+    li.addEventListener('mouseleave', (e) => {
+        e.currentTarget.querySelector("ul.drop").classList.remove("show-nav")
+
+    })
+})

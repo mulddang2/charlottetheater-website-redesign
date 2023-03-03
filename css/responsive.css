@@ -1,24 +1,31 @@
-@media all and (max-width: 768px) {
-  
-}
+@media all and (max-width: 768px) {}
 
 @media screen and (max-width: 1023px) {
-  
+
   .navbar .main-nav {
     display: none;
+  }
 }
-}
+
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  .swiper-slide {
+  .notice-cards .swiper-slide {
     display: flex;
     width: 100%;
   }
+
   .notice-cards {
     width: 100%;
   }
+
   .notice .swiper-wrapper {
     width: 100%;
     padding-left: max(3.4722222222vw, 50px);
+  }
+  .notice-cards h3 {
+    font-size: max(.875rem, 1.75rem);
+  }
+  .notice-card p {
+    font-size: max(.875rem, 1.75rem);
   }
 }
 
@@ -82,7 +89,22 @@
     width: 16px;
     height: 16px;
   }
+
   .notice-cards {
     width: 100%;
+  }
+  .notice-cards h3 {
+    font-size: max(.875rem + .9722222222vw,1.75rem);
+  }
+  .notice-card p {
+    font-size: max(.5rem + .5555555556vw,1rem);
+  }
+
+  .title .en {
+    font-size: 1.063rem;
+  }
+
+  .title h2 {
+    font-size: 2.188rem;
   }
 }
