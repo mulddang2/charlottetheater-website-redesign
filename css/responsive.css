@@ -1,9 +1,13 @@
-@media all and (max-width: 768px) {}
-
 @media screen and (max-width: 1023px) {
 
   .navbar .main-nav {
     display: none;
+  }
+}
+
+@media all and (max-width: 1920px) {
+  .notice-cards {
+    width: 90% !important;
   }
 }
 
@@ -13,20 +17,24 @@
     width: 100%;
   }
 
-  .notice-cards {
-    width: 100%;
-  }
+
 
   .notice .swiper-wrapper {
     width: 100%;
     padding-left: max(3.4722222222vw, 50px);
   }
-  .notice-cards h3 {
-    font-size: max(.875rem, 1.75rem);
+
+  /* .notice-cards h3 {
+    font-size: max(1.1rem, 18px);
   }
+
   .notice-card p {
     font-size: max(.875rem, 1.75rem);
   }
+  .notice-cards p {
+    font-size: 1rem;
+    
+  } */
 }
 
 @media all and (min-width: 1024px) {
@@ -48,12 +56,17 @@
   .navbar .main-nav {
     display: flex;
     gap: 2em;
-    font-size: 18px;
   }
 
   .main-nav li {
     padding: 5px 14px;
     position: relative;
+
+
+  }
+
+  .main-nav>li {
+    padding-bottom: .4375rem;
   }
 
   .main-nav a {
@@ -93,18 +106,20 @@
   .notice-cards {
     width: 100%;
   }
-  .notice-cards h3 {
-    font-size: max(.875rem + .9722222222vw,1.75rem);
-  }
-  .notice-card p {
-    font-size: max(.5rem + .5555555556vw,1rem);
+
+  /* .notice-cards p {
+    font-size: 1rem;
+    
   }
 
+  .notice-cards h3 {
+    font-size: max(.875rem + .9722222222vw, 1.75rem);
+  }
   .title .en {
-    font-size: 1.063rem;
+    font-size: 0.8rem;
   }
 
   .title h2 {
-    font-size: 2.188rem;
-  }
+    font-size: 1.68rem;
+  } */
 }

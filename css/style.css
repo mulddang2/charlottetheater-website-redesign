@@ -16,7 +16,7 @@ main {
   height: max(4.84vw, 95px);
   position: fixed;
   z-index: 100;
-  padding: 3vw 4vw;
+  padding: 0 4vw;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -34,7 +34,6 @@ main {
   position: absolute;
   top: 100%;
   background-color: #430103;
-  margin-top: 0.4375rem;
 }
 .navbar .drop li {
   width: 8em;
@@ -129,7 +128,7 @@ main {
 }
 .notice-cards p {
   line-height: 1.25;
-  margin: 50px 0 60px 0;
+  margin: 2rem 0;
   font-size: max(4.9vw, 1rem);
 }
 .notice-cards .date {
@@ -147,7 +146,7 @@ main {
   height: auto;
   border-radius: 5px;
   text-align: center;
-  padding: 2.63620387vh max(4.6875vw, 15px);
+  padding: 2.68vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;

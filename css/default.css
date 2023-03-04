@@ -10,36 +10,49 @@
     list-style: none;
     box-sizing: border-box;
 }
-html, body {
+
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
-    }
-::before, ::after {
+}
+
+
+::before,
+::after {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Montserrat', 'Noto Sans KR', 'Barlow Condensed', 'Philosopher', sans-serif;
-    font-size: 16px;
     color: #444;
 }
+
 a {
     color: #444;
     text-decoration: none;
 }
-button{
+
+button {
     background: inherit;
-    border:none; 
-    box-shadow:none; 
-    border-radius:0; 
-    padding:0; 
-    overflow:visible; 
-    cursor:pointer;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
     vertical-align: middle;
-} 
+}
+
 ::selection {
     background-color: #A44548;
     color: #fff;
 }
+
 ::placeholder {
     font-family: 'Montserrat', 'Noto Sans KR', 'Barlow Condensed', 'Philosopher', sans-serif;
 }
@@ -48,7 +61,8 @@ button{
 em {
     font-style: normal;
 }
+
 html *[lang="en"] {
-    font-family: 'Barlow Condensed', Montserrat, Noto Sans KR , sans-serif;
+    font-family: 'Barlow Condensed', Montserrat, Noto Sans KR, sans-serif;
     font-weight: 500;
 }

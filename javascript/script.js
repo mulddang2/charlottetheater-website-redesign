@@ -15,16 +15,16 @@ function initSwiper() {
     }
 
     if (ww < 768) {
-        swiperNoticeCards = new Swiper('.swiper.notice-cards', {
+        new Swiper('.swiper.notice-cards', {
             effect: 'cards',
             a11y: accessibilityParameters,
         })
     } else if (ww >= 768) {
-        swiperNoticeCards = new Swiper('.swiper.notice-cards', {
+        new Swiper('.swiper.notice-cards', {
             effect: 'slide',
-            slidesPerView: 1.5,
-            centeredSlides: true,
-            spaceBetween: 50,
+            slidesPerView: 3,
+            //centeredSlides: true,
+            spaceBetween: 30,
             a11y: accessibilityParameters,
         })
     }
@@ -126,6 +126,5 @@ mainNavList.forEach(li => {
     })
     li.addEventListener('mouseleave', (e) => {
         e.currentTarget.querySelector("ul.drop").classList.remove("show-nav")
-
     })
 })
