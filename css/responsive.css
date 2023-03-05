@@ -1,41 +1,35 @@
-@media screen and (max-width: 1023px) {
-
-  .navbar .main-nav {
-    display: none;
-  }
-}
-
 @media all and (max-width: 1920px) {
   .notice-cards {
     width: 90% !important;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
+@media all and (min-width: 768px) and (max-width: 1023.99px) {
   .notice-cards .swiper-slide {
     display: flex;
     width: 100%;
   }
 
-
-
-  .notice .swiper-wrapper {
-    width: 100%;
-    padding-left: max(3.4722222222vw, 50px);
+  .mobile-footer {
+    display: none;
   }
 
-  /* .notice-cards h3 {
-    font-size: max(1.1rem, 18px);
+  #pc-footer {
+    display: block;
   }
 
-  .notice-card p {
-    font-size: max(.875rem, 1.75rem);
+  .copy {
+    background-color: #5F0C0F;
   }
-  .notice-cards p {
-    font-size: 1rem;
-    
-  } */
 }
+
+
+
+.notice .swiper-wrapper {
+  width: 100%;
+  padding-left: max(3.4722222222vw, 50px);
+}
+
 
 @media all and (min-width: 1024px) {
   .pc-header-top {
@@ -53,11 +47,18 @@
     display: none;
   }
 
+  .mobile-footer {
+    display: none;
+  }
+
+  #pc-footer {
+    display: block;
+  }
+
   .navbar .main-nav {
     display: flex;
     gap: 2em;
   }
-
   .main-nav li {
     padding: 5px 14px;
     position: relative;
@@ -71,6 +72,7 @@
 
   .main-nav a {
     background-size: 0% 100%;
+    font-size: min(0.875rem, 18px);
   }
 
   .main-nav a:hover {
@@ -85,11 +87,11 @@
     align-items: center;
     justify-content: space-around;
     width: 18%;
-    font-size: max(0.4375rem + 0.4861111111vw, 0.875rem);
     letter-spacing: max(-0.00625rem - 0.0069444444vw, -0.0125rem);
-    line-height: 1.24;
   }
-
+  footer .footer-title {
+    margin-top: 0;
+  }
   .pc-header-sns-list {
     display: flex;
     width: 11%;
@@ -102,24 +104,34 @@
     width: 16px;
     height: 16px;
   }
-
+  .drop a {
+    font-size: 0.875rem;
+  }
   .notice-cards {
     width: 100%;
   }
-
-  /* .notice-cards p {
-    font-size: 1rem;
-    
+  #newsletter p {
+    padding: 0;
   }
-
-  .notice-cards h3 {
-    font-size: max(.875rem + .9722222222vw, 1.75rem);
+  .pc-footer-fnb .pc-footer-util {
+    width: 30%;
   }
-  .title .en {
-    font-size: 0.8rem;
+  .pc-footer-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.46vw 4vw;
   }
-
-  .title h2 {
-    font-size: 1.68rem;
-  } */
+  .pc-check-container {
+    display: flex;
+    width: 50%;
+  }
+  footer .info-text {
+    font-size: 14px;
+  }
+  .pc-info-container .pc-linebtns {
+    width: 100%;
+  }
+  .copy {
+    background-color: #5F0C0F;
+  }
 }

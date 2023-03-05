@@ -115,6 +115,7 @@ function handleScroll() {
 
     showTopBtn.style.bottom = String(rootElement.clientWidth / 100 * 4) + "px";
 }
+handleScroll();
 document.addEventListener("scroll", handleScroll)
 window.addEventListener("resize", handleScroll);
 

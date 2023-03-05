@@ -1,3 +1,4 @@
+@import "../css/constant.css";
 header {
   width: 100%;
   height: max(4.84vw, 95px);
@@ -9,6 +10,11 @@ main {
 
 .pc-header-top {
   display: none;
+}
+
+.lnbbox a {
+  font-size: min(0.875rem, 14px);
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
@@ -29,6 +35,9 @@ main {
   height: 35px;
   vertical-align: middle;
 }
+.navbar .main-nav {
+  display: none;
+}
 .navbar .drop {
   display: none;
   position: absolute;
@@ -40,7 +49,7 @@ main {
 }
 .navbar .drop a {
   color: #fff;
-  font-size: 14px;
+  font-size: min(0.875rem, 14px);
 }
 
 .drop.show-nav {
@@ -65,7 +74,6 @@ main {
 }
 .title h2 {
   color: #222;
-  font-size: 1.87rem;
   font-weight: 500;
 }
 
@@ -122,23 +130,21 @@ main {
   width: 60%;
   margin-top: 20px;
 }
-.notice-cards h3 {
-  font-size: max(5.75vw, 1rem);
-  line-height: 1.3;
-}
-.notice-cards p {
-  line-height: 1.25;
-  margin: 2rem 0;
-  font-size: max(4.9vw, 1rem);
+.notice-cards .contents-title {
+  padding: 2.125rem 0;
 }
 .notice-cards .date {
-  font-family: "Barlow Condensed", sans-serif;
-  color: #999;
+  font-family: "Montserrat", sans-serif;
+  padding: 1.688rem 0 4.375rem 0;
+  color: #787878;
 }
 .notice-cards .swiper-wrapper {
   width: 30%;
   height: auto;
   padding-bottom: 50px;
+}
+.notice-cards .swiper-pagination {
+  color: #5F5F5F;
 }
 .notice-cards .swiper-slide {
   display: flex;
@@ -177,16 +183,18 @@ main {
   background-color: #FDF3D7;
   padding: 50px 0;
 }
-#newsletter h3 {
+#newsletter .custom-title {
   text-align: center;
-  margin: 20px auto;
+  margin: 20px 0;
   font-family: "Philosopher", sans-serif;
-  font-size: max(12.5vw, 2.5rem);
+  font-size: 3.75rem;
   line-height: 0.7;
+}
+#newsletter .custom-text {
+  font-size: 0.938rem;
 }
 #newsletter p {
   text-align: center;
-  font-size: max(5vw, 1rem);
   line-height: 1.5;
   padding: 3vw 4vw;
 }
@@ -201,12 +209,12 @@ main {
 #newsletter .newsletter-form button {
   width: -moz-fit-content;
   width: fit-content;
-  height: max(10vw, 32px);
+  height: max(2.125rem, 32px);
   display: flex;
   align-items: center;
   border-radius: 50%;
   position: relative;
-  margin: 0;
+  margin-left: 0.75rem;
   border: 2px solid transparent;
 }
 #newsletter .newsletter-form button span {
@@ -224,8 +232,8 @@ main {
   content: url("../images/arrow-r.svg");
   background-color: #430103;
   border-radius: 50%;
-  width: max(10vw, 32px);
-  height: max(10vw, 32px);
+  width: max(2.125rem, 32px);
+  height: max(2.125rem, 32px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,11 +243,8 @@ main {
 }
 
 .form-group {
-  display: flex;
-  max-width: max(93.75vw, 300px);
-  flex-grow: 1;
-  flex: 0 0 auto;
-  flex-flow: column-reverse;
+  display: inline-block;
+  width: 34%;
 }
 .form-group .input-email-style {
   display: block;
@@ -251,6 +256,7 @@ main {
   padding-right: 0;
   border: none;
   border-bottom: 1px solid;
+  height: 10px;
 }
 .form-group input {
   flex-grow: 1;
@@ -258,7 +264,6 @@ main {
   padding-left: 0;
   padding-right: 0;
   border: none;
-  font-size: max(4.375vw, 0.875rem);
   flex: 0 0 auto;
   height: max(13.125vw, 42px);
   padding: max(4.375vw, 14px) max(5vw, 16px) max(3.4375vw, 11px);
@@ -272,16 +277,17 @@ main {
 }
 .form-group input::-moz-placeholder {
   color: #aaaaaa;
+  font-size: 0.75rem;
 }
 .form-group input::placeholder {
   color: #aaaaaa;
+  font-size: 0.75rem;
 }
 .form-group label {
   display: inline-block;
   position: absolute;
   color: #aaa;
   left: 10px;
-  font-size: 20px;
   transition: all 0.2s;
 }
 
@@ -302,8 +308,8 @@ main {
 .cast .cast-name span {
   text-decoration: underline;
   display: block;
-  font-size: max(0.4375rem + 0.4861111111vw, 0.875rem);
   line-height: 1.14;
+  font-size: var(--contents-text-font-size);
 }
 
 .wrap-autoplay-control {
@@ -380,13 +386,17 @@ footer .footer-logo {
 footer .footer-title {
   margin: 5px auto;
   padding: 5px 0;
-  font-size: 0.813rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 footer .info-text {
   color: #D3C8C8;
+  font-size: var(--contents-text-font-size);
+  font-family: "Noto Sans KR", sans-serif;
 }
 footer .cs-center {
   margin-bottom: 20px;
+  font-size: var(--contents-text-font-size);
 }
 
 .info-container {
@@ -405,8 +415,8 @@ footer .cs-center {
   width: 48%;
   border-radius: 5px;
   padding: 15px;
+  font-weight: 500;
   font-size: 0.75rem;
-  font-weight: bold;
 }
 
 .info {
@@ -415,23 +425,19 @@ footer .cs-center {
 }
 .info span {
   line-height: 165%;
-  font-size: 0.656rem;
-}
-.info .info-text {
-  font-size: 0.656rem;
 }
 
-.sns-list {
+.footer-menu .sns-list {
   width: 58%;
   margin: 0 2% 0 0;
   padding: 1rem 0;
   float: left;
 }
-.sns-list li {
+.footer-menu .sns-list li {
   display: inline-block;
   padding-right: 6px;
 }
-.sns-list a {
+.footer-menu .sns-list a {
   display: block;
   width: 48px;
   height: 48px;
@@ -440,32 +446,129 @@ footer .cs-center {
   background: #A06363 center no-repeat;
   margin: 0 auto;
 }
-.sns-list .icon-youtube a {
-  background-image: url("../images/icon-youtube.svg");
+.footer-menu .sns-list .icon-youtube a {
+  background-image: url("../images/icon-youtube1.svg");
 }
-.sns-list .icon-band a {
-  background-image: url("../images/icon-band.svg");
+.footer-menu .sns-list .icon-band a {
+  background-image: url("../images/icon-band1.svg");
 }
-.sns-list .icon-twitter a {
-  background-image: url("../images/icon-twitter.svg");
+.footer-menu .sns-list .icon-twitter a {
+  background-image: url("../images/icon-twitter1.svg");
 }
 
 .copy {
-  padding: 1.4375rem 4%;
-  font-size: 0.625rem;
+  padding: 0.625rem 4%;
 }
 
 .footer-util {
   clear: both;
   line-height: 170%;
   margin-bottom: 1rem;
-  font-size: 0.625rem;
 }
 .footer-util li {
   display: inline-block;
+}
+.footer-util a {
+  font-size: var(--contents-text-font-size);
 }
 
 .footer-util li:not(:last-child)::after {
   content: "|";
   margin: 0.625rem;
+}
+
+#pc-footer {
+  display: none;
+}
+
+.pc-footer-fnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #C6797B;
+}
+.pc-footer-fnb .pc-footer-util {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 0 4vw;
+}
+.pc-footer-fnb .pc-footer-util a {
+  font-size: 0.7rem;
+}
+
+.sns-list {
+  display: flex;
+  padding: 0 4vw;
+}
+
+.sns-list a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  background: transparent center no-repeat;
+  margin: 0 auto;
+}
+
+.icon-youtube a {
+  background-image: url("../images/icon-youtube.svg");
+}
+
+.icon-band a {
+  background-image: url("../images/icon-band.svg");
+}
+
+.icon-twitter a {
+  background-image: url("../images/icon-twitter.svg");
+}
+
+.pc-footer-contents {
+  padding: 0 4vw;
+}
+
+.pc-info-container .footer-title {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.pc-info-container .info-text {
+  margin: 0.37rem 0 1.688rem auto;
+  font-weight: 300;
+}
+.pc-info-container .pc-linebtns {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 1.75rem;
+}
+.pc-info-container .pc-linebtns button {
+  border: 1px solid #C6797B;
+  display: inline-block;
+  width: 47%;
+  padding: 0.5rem;
+}
+
+.pc-check-container {
+  display: none;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.pc-check-container .pc-info-title {
+  font-size: min(1rem, 16px);
+}
+.pc-check-container span {
+  font-size: min(1.625rem, 26px);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.ad .info-text {
+  margin-top: 0.625rem;
+}
+
+.copy {
+  font-size: 0.625rem;
+  text-align: center;
+  font-weight: 300;
 }

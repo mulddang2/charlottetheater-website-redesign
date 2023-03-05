@@ -1,0 +1,8 @@
+:root {
+    /* Font-Size */
+    --number-font-size: 0.688rem;
+    --en-title-font-size: 0.75rem;
+    --contents-title-font-size: 0.938rem;
+    --contents-text-font-size:  0.75rem;
+    --title-font-size: 1.063rem;
+}

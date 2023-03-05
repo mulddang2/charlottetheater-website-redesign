@@ -1,14 +1,22 @@
 @charset 'utf-8';
+@import "../css/constant.css";
 
 header {
     width: 100%;
     height: max(4.84vw, 95px);
 }
+
 main {
     width: 100%;
 }
+
 .pc-header-top {
     display: none;
+}
+
+.lnbbox a {
+    font-size: min(0.875rem, 14px);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
@@ -32,12 +40,15 @@ main {
         }
     }
 
+    .main-nav {
+        display: none;
+    }
+
     .drop {
         display: none;
         position: absolute;
         top: 100%;
         background-color: #430103;
-        // margin-top: .4375rem;
 
         li {
             width: 8em;
@@ -45,7 +56,7 @@ main {
 
         a {
             color: #fff;
-            font-size: 14px;
+            font-size: min(0.875rem, 14px);
         }
 
     }
@@ -74,10 +85,9 @@ main {
 
     h2 {
         color: #222;
-        font-size: 1.87rem;
         font-weight: 500;
     }
-    
+
 }
 
 .btn-top {
@@ -145,28 +155,24 @@ main {
     width: 60%;
     margin-top: 20px;
 
-    h3 {
-        font-size: Max(5.75vw, 1rem);
-        line-height: 1.3;
+    .contents-title {
+        padding: 2.125rem 0;
     }
-
-    p {
-        line-height: 1.25;
-        margin: 2rem 0;
-        font-size: Max(4.9vw, 1rem);
-    }
-
-
 
     .date {
-        font-family: 'Barlow Condensed', sans-serif;
-        color: #999;
+        font-family: 'Montserrat', sans-serif;
+        padding: 1.688rem 0 4.375rem 0;
+        color: #787878;
     }
 
     .swiper-wrapper {
         width: 30%;
         height: auto;
         padding-bottom: 50px;
+    }
+
+    .swiper-pagination {
+        color: #5F5F5F;
     }
 
     .swiper-slide {
@@ -210,17 +216,20 @@ main {
     background-color: #FDF3D7;
     padding: 50px 0;
 
-    h3 {
+    .custom-title {
         text-align: center;
-        margin: 20px auto;
+        margin: 20px 0;
         font-family: 'Philosopher', sans-serif;
-        font-size: max(12.5vw, 2.5rem);
+        font-size: 3.75rem;
         line-height: 0.7;
+    }
+
+    .custom-text {
+        font-size: 0.938rem;
     }
 
     p {
         text-align: center;
-        font-size: Max(5vw, 1rem);
         line-height: 1.5;
         padding: 3vw 4vw;
 
@@ -237,12 +246,12 @@ main {
 
         button {
             width: fit-content;
-            height: Max(10vw, 32px);
+            height: Max(2.125rem, 32px);
             display: flex;
             align-items: center;
             border-radius: 50%;
             position: relative;
-            margin: 0;
+            margin-left: 0.75rem;
             border: 2px solid transparent;
 
             span {
@@ -260,8 +269,8 @@ main {
                 content: url('../images/arrow-r.svg');
                 background-color: #430103;
                 border-radius: 50%;
-                width: Max(10vw, 32px);
-                height: Max(10vw, 32px);
+                width: Max(2.125rem, 32px);
+                height: Max(2.125rem, 32px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -276,11 +285,12 @@ main {
 }
 
 .form-group {
-    display: flex;
-    max-width: Max(93.75vw, 300px);
-    flex-grow: 1;
-    flex: 0 0 auto;
-    flex-flow: column-reverse;
+    display: inline-block;
+    // max-width: Max(93.75vw, 300px);
+    // flex-grow: 1;
+    // flex: 0 0 auto;
+    // flex-flow: column-reverse;
+    width: 34%;
 
     .input-email-style {
         display: block;
@@ -292,6 +302,7 @@ main {
         padding-right: 0;
         border: none;
         border-bottom: 1px solid;
+        height: 10px;
 
     }
 
@@ -301,7 +312,6 @@ main {
         padding-left: 0;
         padding-right: 0;
         border: none;
-        font-size: Max(4.375vw, .875rem);
         flex: 0 0 auto; //flex: none
         height: Max(13.125vw, 42px);
         padding: Max(4.375vw, 14px) Max(5vw, 16px) Max(3.4375vw, 11px);
@@ -319,6 +329,7 @@ main {
 
         &::placeholder {
             color: #aaaaaa;
+            font-size: 0.75rem;
         }
     }
 
@@ -327,7 +338,6 @@ main {
         position: absolute;
         color: #aaa;
         left: 10px;
-        font-size: 20px;
         transition: all .2s;
     }
 }
@@ -349,8 +359,8 @@ main {
     .cast-name span {
         text-decoration: underline;
         display: block;
-        font-size: max(.4375rem + .4861111111vw, .875rem);
         line-height: 1.14;
+        font-size: var(--contents-text-font-size);
     }
 }
 
@@ -431,16 +441,19 @@ footer {
     .footer-title {
         margin: 5px auto;
         padding: 5px 0;
-        font-size: .813rem;
-        //font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
     }
 
     .info-text {
         color: #D3C8C8;
+        font-size: var(--contents-text-font-size);
+        font-family: 'Noto Sans KR', sans-serif;
     }
 
     .cs-center {
         margin-bottom: 20px;
+        font-size: var(--contents-text-font-size);
     }
 }
 
@@ -461,8 +474,8 @@ footer {
         width: 48%;
         border-radius: 5px;
         padding: 15px;
-        font-size: .75rem;
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 0.75rem;
     }
 }
 
@@ -472,16 +485,10 @@ footer {
 
     span {
         line-height: 165%;
-        font-size: .656rem;
-
-    }
-
-    .info-text {
-        font-size: .656rem;
     }
 }
 
-.sns-list {
+.footer-menu .sns-list {
     width: 58%;
     margin: 0 2% 0 0;
     padding: 1rem 0;
@@ -503,36 +510,144 @@ footer {
     }
 
     .icon-youtube a {
-        background-image: url('../images/icon-youtube.svg');
+        background-image: url('../images/icon-youtube1.svg');
     }
 
     .icon-band a {
-        background-image: url('../images/icon-band.svg');
+        background-image: url('../images/icon-band1.svg');
     }
 
     .icon-twitter a {
-        background-image: url('../images/icon-twitter.svg');
+        background-image: url('../images/icon-twitter1.svg');
     }
 }
 
 .copy {
-    padding: 01.4375rem 4%;
-    font-size: 0.625rem;
-
+    padding: 0.625rem 4%;
 }
 
 .footer-util {
     clear: both;
     line-height: 170%;
     margin-bottom: 1rem;
-    font-size: 0.625rem;
 
     li {
         display: inline-block;
+    }
+
+    a {
+        font-size: var(--contents-text-font-size);
     }
 }
 
 .footer-util li:not(:last-child)::after {
     content: '|';
     margin: 0.625rem;
+}
+#pc-footer {
+    display: none;
+}
+.pc-footer-fnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #C6797B;
+
+    .pc-footer-util {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        padding: 0 4vw;
+        a {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+.sns-list {
+    display: flex;
+    padding: 0 4vw;
+
+}
+
+.sns-list a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-indent: -9999px;
+    border-radius: 50%;
+    background: transparent center no-repeat;
+    margin: 0 auto;
+}
+
+.icon-youtube a {
+    background-image: url("../images/icon-youtube.svg");
+}
+
+.icon-band a {
+    background-image: url("../images/icon-band.svg");
+}
+
+.icon-twitter a {
+    background-image: url("../images/icon-twitter.svg");
+}
+
+.pc-footer-contents {
+    padding: 0 4vw;
+
+}
+
+.pc-info-container {
+
+    .footer-title {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .info-text {
+        margin: 0.37rem 0 1.688rem auto;
+        font-weight: 300;
+    }
+
+    .pc-linebtns {
+        display: flex;
+        justify-content: space-between;
+        width: 48%;
+        margin-bottom: 1.75rem;
+    }
+
+    .pc-linebtns button {
+        border: 1px solid #C6797B;
+        display: inline-block;
+        width: 47%;
+        padding: 0.5rem;
+    }
+}
+
+.pc-check-container {
+    display: none;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .pc-info-title {
+        font-size: min(1rem, 16px);
+    }
+
+    span {
+        font-size: min(1.625rem, 26px);
+        font-family: 'Noto Sans KR', sans-serif;
+
+
+    }
+}
+
+.ad .info-text {
+    margin-top: 0.625rem;
+}
+
+.copy {
+    font-size: 0.625rem;
+    text-align: center;
+    font-weight: 300;
 }
